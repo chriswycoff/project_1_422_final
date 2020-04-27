@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "635516174006",
+    "firebase_url": "https://ducktracker-d95db.firebaseio.com",
+    "project_id": "ducktracker-d95db",
+    "storage_bucket": "ducktracker-d95db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635516174006:android:9a4b1b7fe17872f9c7b017",
+        "android_client_info": {
+          "package_name": "com.example.map_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "635516174006-vc507hd0qp4honrdr897st46ql3rf9qh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtbR8FLXSwoI4cpIjlbYzrZUGw0ck700Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "635516174006-vc507hd0qp4honrdr897st46ql3rf9qh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635516174006:android:11f81573976c908bc7b017",
+        "android_client_info": {
+          "package_name": "com.example.map_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "635516174006-vc507hd0qp4honrdr897st46ql3rf9qh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtbR8FLXSwoI4cpIjlbYzrZUGw0ck700Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "635516174006-vc507hd0qp4honrdr897st46ql3rf9qh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

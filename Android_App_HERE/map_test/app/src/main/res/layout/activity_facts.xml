@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
+    android:padding="50dp"
+    tools:context=".Facts"
+    >
+
+    <TextView
+        android:id="@+id/main_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/did_you_know"
+        android:textColor="@color/fifty_percent_white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/factTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="162dp"
+        android:text="@string/fact_1"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/showFactButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="updateButtonThreeOnClick"
+        android:background="#FFFFFF"
+        android:text="@string/back_to_map"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="200dp"
+        android:layout_marginRight="300dp"
+        android:layout_marginBottom="193dp"
+        android:onClick="updateButtonNextFactOnClick"
+        android:text="Next Fact" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">map_test</string>
+    <string name="title_activity_maps">Duck Tracker</string>
+    <string name="update">Update Location</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="did_you_know">Did you know?</string>
+    <string name="show_facts">Covid-19 Facts</string>
+    <string name="back_to_map">Back to Map</string>
+
+
+    <!--FACT STRINGS-->
+    <!-- SOURCE https://www.cdc.gov/coronavirus/2019-ncov/daily-life-coping/share-facts.html -->
+    <string name="fact_1">You are helping fight Covid-19 by providing
+    anonymous geolocation data. Thank You! </string>
+    <string name="fact_2">Diseases can make anyone sick regardless of their race or ethnicity.</string>
+    <string name="fact_3">For most people, the immediate risk of becoming seriously
+        ill from the virus that causes COVID-19 is thought to be low. </string>
+    <string name="fact_4">Wash your hands often with soap and water for at least 20 seconds,
+        especially after blowing your nose, coughing, or sneezing;
+        going to the bathroom; and before eating or preparing food.</string>
+
+
+
+    <string name="advice" >
+        Please keep this application open (or in background). This will ensure your geolocation data helps fight covid-19
+    </string>
+
+
+
+
+
+    <string-array name="facts_array">
+            <item>Scala You are helping fight Covid-19 by providing
+    anonymous geolocation data. Thank You! </item>
+        <item>Diseases can make anyone sick regardless of their race or ethnicity.</item>
+        <item>For most people, the immediate risk of becoming seriously
+        ill from the virus that causes COVID-19 is thought to be low.</item>
+        <item>Wash your hands often with soap and water for at least 20 seconds,
+        especially after blowing your nose, coughing, or sneezing;
+        going to the bathroom; and before eating or preparing food.</item>
+    </string-array>
+    <!--END FACT STRINGS-->
+</resources>
