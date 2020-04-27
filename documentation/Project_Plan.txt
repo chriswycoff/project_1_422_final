@@ -1,0 +1,292 @@
+Duck Tracker
+Initial Project Plan
+Dennis Zipprich (dbz) - 4/26/2020 - v2.0
+
+Table of Contents
+1. Project Plan Revision History
+2. Management Plan
+2.1 Team Organization and Responsibilities
+2.2 Team Meeting Logistics
+3. Work Breakdown Schedule
+3.1 Milestone in the Critical Path
+3.2 Team Progress Record
+4. Monitoring and reporting
+5. Build Plan
+5.1 Beta Build
+5.2 Final Build
+6. References
+
+How to use this Document
+
+This is a basic project plan document for Group 6, and describes the content
+and general organization to be used for a Project Plan in CIS 422
+Software Methodologies. The document is distilled from several primary sources,
+each of which is cited in the article and listed in the references at the end
+of the article. 
+
+
+1. Project Plan Revision History
+
+This section will provide change history for this document. If any change is made it
+will be documented here with the following information:
+
+Date - This is the specific day that the change was made to this document.
+Author - This is the person responsible for making that change in the form of
+	initials.
+Description - This is a brief overview of what changes are made in the entry.
+
+Before a change is made it should be first reviewed by team members and then
+approved by the document manager.
+
+Date		Author	Description 
+4/11/2020	dbz	Created initial document.
+4/15/2020	nbh	Small additions and modifications to sections 2 and 5
+4/23/2020	dbz	removed diagrams, formatted file for .txt format for
+			git hub transfer
+4/25/2020	nbh	Added detail and updates throughout document
+4/25/2020	dbz	created section 3.2, edited dates in section 3.1, other
+			small changes
+			 	
+
+2. Management Plan
+
+2.1 Team Organization and Responsibilities
+
+Our team, Group 6, consists of the following people:
+Nick Henderson, Wentian Lin, Chris Wycoff, Hongtao Yang, Dennis Zipprich.
+We have three sub groups where responsibility is then divided to further 
+disperse the workload among team members.
+
+The first subgroup consists of just Dennis Zipprich. This subgroup is
+responsible for all managerial processes, documents and logistics. This first
+subgroup provides help where needed to ensure the project gets delivered on
+time.
+
+The second subgroup consists of Nick Henderson and Chris Wycoff. This
+subgroup is in charge of Android app development and database set up and
+delivery. This subgroup is responsible for timely development and delivery
+of all Android mobile app software modules, the connection of this app to
+a database, and a method of downloading the database in the required format. 
+
+The third subgroup consists of Wentian Lin and Hongtao Yang. This subgroup
+will be in charge of developing the web app that provides a means for users to
+view the data being stored in the database.
+
+2.2 Team Meeting Logistics
+
+Group 6, with everybody present, meets via Zoom meeting two times a week 
+on Tuesdays and Thursdays following CIS422 lecture. These meetings consist
+of top level progress reports of the project and what issues are currently 
+the most pressing for the project and project logistics. Team members are
+expected to stay on topic and make efficient use of this time.
+
+Team subgroups also meet outside of the times listed above to ensure
+smooth and on-time development of Duck Tracker software modules.
+
+
+3. Work Breakdown Schedule
+
+This section will outline the work breakdown schedule. This will include
+specific items in the critical path and when major milestones are met. This
+section will also include any delays in the work process.
+
+3.1 Milestones in the Critical Path
+
+There are 10 major milestones in this project. As our team is split in 
+subgroups with different responsibilities, many different milestones can 
+be ongoing at any one time. 
+
+Each milestone will have a description of the milestone, person
+responsible, and due date for milestone in mm/dd/yyyy, time(24hr) format.
+
+Milestone 1 -
+All group member review project and requirements, all members understand what is
+required of the project. Approximate personnel hours: 6 hours
+Group responsible: All members
+Due date: 04/10/2020, 1600
+Completion date: 04/10/2020, 1400 
+
+Milestone 2 -
+Finalized project plan to entire team, all members know roles and deliverables. 
+Approximate personnel hour: 6 hours
+Group responsible: All members
+Due date: 04/11/2020, 1400
+Completion date: 04/10/2020, 1600
+
+Milestone 3 -
+Begin Android app development. 
+Approximate personnel hours: 1 hour
+Group responsible: Subgroup 2
+Due date: 04/17/2020, 1300
+Completion date: 04/14/2020, 1300
+
+Milestone 4 -
+Android App base development is complete and is ready for integration with
+other software. 
+Approximate personnel hours: 16 hours (two work day development time)
+Group responsible: Subgroup 2
+Due date: 04/24/2020, 1300
+Completion Date: 4/20/2020, 1300
+
+Milestone 5 -
+Firebase database system accepts injected data and stores information in correct
+format, ready for integration from other software modules. 
+Approximate personnel hours: 8 hours (one work day development time)
+Group responsible: Subgroup 2
+Due date: 04/17/2020, 1300
+Completion Date: 4/18/2020, 1700
+
+Milestone 6 -
+Web app has functioning page that displays correct injected data, ready for
+software integration. 
+Approximate personnel hours: 8 hours (one work day development time)
+Group responsible: Subgroup 3
+Due date: 04/17/2020, 1300
+Completion Date: 4/21/2020, 1300
+
+Milestone 7 -
+Release of beta version, all modules work together as one system collecting real
+time data, ready for debug process and pollish of software systems. 
+Approximate personnel hours: 8 hours (one work day development time)
+Group responsible: All members
+Due date: 04/21/2020, 1300
+Completion Date: 04/21/2020, 1300
+
+Milestone 8 - 
+Applicable project documents are completed, and reviewed by the rest of the team. 
+Approximate personnel hours: 16 hours (two work days development time)
+Group responsible: Subgroup 1, All members
+Due date: 04/26/2020, 1000
+Completion Date: 04/26/2020, 2000
+
+Milestone 9 - 
+Duck Tracker system works as intended, quality control/stress test start, begin
+one week of data collection as required by project specification.
+Approximate personnel hours:  8 hours (one work day development time)
+Group responsible: All members
+Due date: 04/26/2020, 0800
+Completion Date: 4/26/2020, 1200 
+
+Milestone 10 - Software is delivered
+Total data collection time: One (1) calendar week
+Approximate personnel hours:  1 hour 
+Group responsible: All members
+Due date: 04/26/2020, 0800
+Completion Date: 4/26/2020, 1200
+Data Collection Completion Date: 5/04/2020, 0000
+
+Milestones 3, 4, 5, and 6 may be completed concurrently. These milestones are
+where the majority of work is split between the team. All other milestones must
+be completed before moving on to the next milestone. 
+
+3.2 Team Progress Record
+
+This section is dedicated to team meetings and progress made during those meetings. Each meeting is
+dated and has specific deliverables based on the milestones outlined above in section 3.1. Each meeting
+team members will identify progress made during their specific assignments.
+
+Meeting 04/07/2020 1300
+Reviewed project requirements
+
+Meeting 04/10/2020 1300
+Reviewed project requirements, finalized project plan to team, split into subgroups and begin developments
+Milestone 1, Milestone 2 achieved
+
+Meeting 04/14/2020 1300
+Top level status reports, subgroup 2 making amazing progress
+Milestone 3 achieved
+
+Meeting 04/17/2020 1300
+Top level status reports, subgroup 2 ahead of schedule
+Milestone 4, Milestone 5 achieved
+Milestone 6 overdue, subgroup is make slow progress
+
+Meeting 04/21/2020 1300
+Top level status reports
+Milestone 6, Milestone 7 achieved
+
+Meeting 04/23/2020 1300
+Top level status reports, team is currently debugging part of project
+
+Instructor Meeting 04/24/2020 1600
+Separate team member questions, quick discussion on files
+
+Meeting 04/25/2020 1300
+Top level status reports
+Milestone 9 achieved
+
+Meeting 04/26/2020 1230
+Top level status reports, project wrap up
+Milestone 10 complete
+Milestone 8 overdue, subgroup is making slow progress
+
+Meeting 04/26/2020 1730
+Document review
+Milestone 8 Complete
+
+4. Monitoring and Reporting
+
+This section is dedicated to monitoring and reporting for progress on project 1.
+This section will detail the specific monitoring information completed by the
+team manager. This section will also detail specific progress reports made by
+team subgroups. The main report outlined in this section is the progress report.
+
+A progress report will consist of progress made since the last progress report,
+any obstacles with development of software, potential future troubles, and any
+other concerns with regards to the project. Progress reports are conducted by
+the team administrator and the applicable team subgroup. The purpose of the
+status report is to assess the progress being made by the team member
+subgroups and potentially identify any potential work stoppages in the critical path.
+
+
+5. Build Plan
+
+This project will be broken down into two major builds. The two major builds
+will be a beta build of our software system, and a final build. These major
+builds will follow the project milestones as closely as possible. Build plan will
+follow the Milestone progress status as closely as possible to deliver the project on time.
+
+5.1 Beta Build
+
+Our team selected to go with a beta build due to ease of verifying proper
+operation and debugging when necassary. A highly polished beta build would
+better resemble a final build for Ducktracker, and would allow our team to
+make improvements where we saw fit.
+
+The beta is a near-complete version of our system, one that has little to no bugs
+with operation and consistently logs location data in the database. 
+This beta build will be primarily used for debugging use of the entire system 
+and testing the system for extended periods of time.
+This phase will also serve the purpose of identifying areas for improving ease
+of use, as necessary.
+
+This will be roughly equivalent to a working copy of Duck Tracker’s entire
+working system, and should resmemble as close as possible to a final build.  
+
+5.2 Final Build
+
+The final build features no known bugs, which has been verified by extensive use.
+This is the intended end product of our software system, meeting all project
+requirements and ready to ship to users and stakeholders.
+
+In this stage, the Android app, database, and web portal are integrated and functioning
+properly. A tool is provided as a means of downloading the database in the format
+specified by the system requirements. 
+
+The final build was tested on a device that remained plugged in and on for two separate
+24-hour periods and recorded measurements in 5-minute intervals with no interruption. 
+
+6. References
+
+Vliet, Hans. (2008). Software Engineering: Principles and Practice, 3nd edition,
+John Wiley & Sons.
+
+Uses of Class java.util.UUID. (n.d.).
+Retrieved from https://docs.oracle.com/javase/8/docs/api/java/util/class-use/UUID.html
+
+Best practices for working with Android identifiers. (2020, March 19).
+Retrieved from
+https://developer.android.com/training/articles/user-data-ids#best-practices-android-identifiers
+
+Tracy V. Wilson "How GPS Phones Work" 24 October 2005. HowStuffWorks.com.
+https://electronics.howstuffworks.com/gps-phone.htm 14 April 2020

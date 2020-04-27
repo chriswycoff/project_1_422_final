@@ -1,0 +1,55 @@
++++ Parts
+	+ Android APP
+		Step 1: 
+			- Power on an Android OS cell phone
+
+		Step 2: 
+			- Go to 
+				http://nhend.github.io/ducktracker/ducktracker.apk
+			  to download the app
+
+		Step 3: 
+			- Allow all permissions when prompted to install
+
+			- Open Duck Tracker app
+
+
+		Step 4: 
+			- For optimal use (not required but may help with 
+			some connectivity issues on differing phone settings):
+				1. Change phone power and usage setting to "Allow Duck Tracker
+					to run in background"
+				2. Keep Duck Tracker app open 
+				3. Keep phone plugged in
+				4. Regularly restart app as feasible (especially when leaving the 
+				house)
+
+	+ Python Script
+		Step 1: 
+
+			- Go to https://nhend.github.io/ducktracker/ducktracker_convert.py
+				to download conversion script
+
+			- Move this script to desired file path
+
+			- Open BASH shell or equivalent
+
+			- (if not downloaded download and install python3) found at 
+				https://www.python.org/downloads/
+
+			- Execute command "python3 ./ducktracker-convert.py"
+
+		Step 2: 
+			- Follow the prompt to get real time data
+			- Now save a text file (this is now 422 specified format)
+
+	+ Web Portal/ View data publicly
+		Step 1: 
+			- Go to https://nhend.github.io/ducktracker/
+
++++ Software dependencies:
+	Python 3 (for conversion/pull script)
+	Android OS (for phone)
+	Web Browser with javascript/html capabilities (for web portal)
+
++++ Please standby for any future updates

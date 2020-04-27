@@ -1,0 +1,151 @@
+Duck Tracker User Documentation
+Dennis Zipprich (dbz) - v1.0
+
+Table of Contents
+1 Introduction
+2 Installation/Run
+3 Normal Operation Mode
+4 Manual Location Update
+5 COVID-19 Facts
+6 Viewing Collected Data
+6.1 Viewing of Collected Data with Python Script
+
+
+1. Introduction
+
+Duck Tracker enables the user to allow location tracking via their Android
+mobile device. This in turn allows the user to view anonymous aggregated data
+collected by Duck Tracker.
+
+Duck Tracker requires that a user must have a internet connected Android mobile
+device. This mobile device may be connected via wifi or cellular data, and is
+the only required hardware the user needs to run Duck Tracker.
+
+Duck Tracker was designed to be lightweight and easy to use. With that design
+philosophy in mind, our team implemented an easy to use and minimal application.
+This documents will outline simple operations of Duck Tracker. 
+ 
+
+2. Installation/Run
+
+The following 4 steps are required to run Duck Tracker:
+
+	1. The user must download the following files on to their phone:
+		ducktracker.apk
+
+		This file can be found at the following website:
+			https://nhend.github.io/ducktracker/
+
+		User must click on the link name "Download the Duck Tracker app"
+				
+	2. Once the user has downloaded the above file, the user must open the
+	application on their mobile device.
+
+	3. When the application is opened, data collection collections starts
+	immediately with no prompt from the user.
+
+	4. User must also keep the application open on their phone for continuous
+	data gathering.
+
+
+3. Normal Operation Mode (Passive Data Collection)
+
+The following steps are needed for the user to access normal operation of Duck
+Tracker. Since Duck Tracker was designed to be lightweight, normal operation is
+defined as passive data collection mode.
+	
+	1. The user has completed Section 2, Installation/Run.
+	
+	2. User keeps Duck Tracker open for automatic data collection. If user's
+	mobile device falls asleep or user closes out of application, Duck
+	Tracker will not automatically gather geolocation data.
+
+4. Manual Location Update
+
+The following steps are required to manually update location in Duck Tracker.
+
+	1. User has the app open on a mobile device.
+	
+	2. On lower part of display user selects input button labeled
+	"Update Location".	
+  
+	3. Map on upper part of display is updated with current location using a
+	pin representation.
+
+5. COVID-19 Facts
+
+Duck Tracker comes with a built functionality that displays COVID-19 facts and
+best practices for users to stay informed about COVID-19 situations.
+
+The following 5 steps are for accessing the COVID-19 Facts functionality:
+
+	1. User has the app open on a mobile device.
+	
+	2. On the lower part of the display user selects an input button labeled
+	"COVID-19 facts".
+	
+	3. Once user presses this button, this will take user to main display for
+	COVID-19 facts. Users may now read one fact picked by the built in
+	algorithm.
+
+	4. If user wants to view another fact, user must press input button labeled
+	"Next Fact", this will change the fact displayed on screen. User may repeat
+	this step to view more facts, otherwise go to the next step.
+
+	5. If user want to go back to main screen of Duck Tracker, user must press
+	input button labeled "Back To Map". This will take the user to main screen
+	of application 
+
+6. Viewing of Collected Data
+
+Duck Tracker enables the user to view anonymous data collected by all users. A
+standard time interval of collection is every five(5) minutes.
+
+The following 4 steps are for viewing aggregated data for users wanting to
+casually view all data.
+
+	1. User access internet connected device and opens up modern web
+	browsing software.
+
+	2. user navigates to the following website:
+		https://nhend.github.io/ducktracker/
+
+	3. From website user may view anonymous aggregated data collected
+	organized by unique user id, time, latitude, and longitude. the user
+	can view all data stored in the server. 
+  
+	4. Page 1 is the oldest data collected by Duck Tracker, and the last page
+	is the most current data.
+
+6.1 Viewing of Collected Data with Python Script
+
+The Following 9 steps is for users that require data that is formatted for further
+use. The data is stored as tab delimited format in a .txt file. Data is stored
+in the following format:
+	User I.D.\tDate\tTime\tLatitude\tLongitude\tTime at Location\n
+
+	1. User access internet connected computer and opens up modern web
+	browsing software.
+
+        2. user navigates to the following website:
+                https://nhend.github.io/ducktracker/	
+
+	3. Click on the link name "Download the data conversion tool", to
+	download the file named "ducktracker-convert.py".
+
+	4. File will be saved into Downloads folder or specified folder.
+
+	5. If user does not have Python3.0 installed on computer, visit: 
+	https://www.python.org/downloads/
+
+	6. Open BASH shell or equivalent and navigate to folder containing
+	downloaded file specified in step 3.
+	
+	7. Execute command "python3 ./ducktracker-convert.py".
+
+	8. A pop up will display, and the user will need to select the prompt.
+
+	9. the user will then save the file into the selected folder.
+
+
+

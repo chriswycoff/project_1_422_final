@@ -1,0 +1,271 @@
+﻿Duck Tracker
+Programmer’s Documentation
+
+
+Nick Henderson, Chris Wycoff, Wentian Lin, Hongtao Yang
+
+
+This document serves to provide an overview of the files which comprise the Duck Tracker system, and any information about their implementation that would be useful to anyone seeking to modify the system.
+
+
+The original technical components of the system are comprised of four parts: the Android app that users install to gather their location data, the Firebase database where location data is stored, a Python script that can be used to download the database in a human readable format, and a website where the database can be viewed. 
+
+
+
+
+Android app
+Programmer - Christopher Wycoff
+
+
+The 2 main source files can be found via filepath:
+map_test/app/src/main/java/com/example/map_test
+
+
+First main file: MapsActivity.java
+        The source code flows as follows: 
++++ Contains a series of import statements. Most of these import statements are to support connectivity to the firebase database, geolocation, user identification, and OS level process handling to enable background processes when the app is running in the background (only works consistently on some phones/settings).
+
+
++++ “public class MapsActivity extends FragmentActivity implements OnMapReadyCallback”
+--- This is the main class that allows the map/geolocation portion of the app
+
+
++++ “public String getUUID()”
+--- This function returns a unique user ID, which generates a universally unique identifier by hashing the Android ID associated with the user’s device.
+
+
++++”protected void onCreate(Bundle savedInstanceState)”
+        --- Get permission to access the phone's geolocation services, both fine and coarse grain location.
+
+
++++  “onDataChange(@NonNull DataSnapshot dataSnapshot)”
+--- When there is a change in Latitude / Longitude 
+
+
+
+
++++   “final Handler handler = new Handler();
+        handler.postDelayed(new Runnable()”
+        --- This section allows for background functionality of the app. 
+
+
++++ “ public void onMapReady(GoogleMap googleMap)”
+        “public void onLocationChanged(Location location)”
+        --- Changes the latitude and longitude variables when the map is ready.
+
+
++++ “updateButtonOneOnClick(View view)”
+        --- Allows the user to center and view his location. 
+
+
+For additional fine grain explanations please see comments within source code.
+
+
+Second main file: Facts.java
+The source code flows as follows: 
+
+
++++ “public class Facts extends AppCompatActivity”
+        --- Creates the window and new activity for the facts portion of the app. 
+
+
++++ “updateButtonNextFactOnClick”
+        --- Increments next fact
+
+
++++ “updateButtonThreeOnClick”
+        --- Navigates back to map screen
+
+
+Other significant files within the app build directory structure
+
+
++++ map_test/app/src/main/res/layout/activity_facts.xml
+        --- xml script code to allow for formating of the facts screen
+
+
++++ map_test/app/src/main/res/layout/activity_maps.xml
+        --- xml script code to allow for formating of the map screen view
+
+
+
+
+Firebase/Google API
+Programmer - Christopher Wycoff
+
+
++++ map_test/app/google-service.json
+        --- The crucial portions of this file are:
+                --- package_name (line 42) 
+                --- area to play API key (line )
+                        "api_key"
+ "current_key"  
+To obtain new/renew API key see
+https://developers.google.com/maps/documentation/javascript/get-api-key
+
+
++++ To get direct database access go to:
+---https://console.firebase.google.com/project/ducktracker-d95db/database/ducktracker-d95db/data
+If access credentials are needed email the admin at chriswywy@gmail.com
+        
+
+
+
+
+Web portal
+Programmers - Wentian Lin/ Hongtao Yang / Nick Henderson
+
+
+The Index.html file uses jquery Javascript library
+
+
+The  Index.html provides web 
+
+
+
+
++++ <link rel="stylesheet" href="css/jquery.datatables.min.css" />
+This is directly from jquery library
+
+
++++ <link rel="stylesheet" href="css/buttons.dataTables.min.css" />
+The buttons.dataTables display the buttons to download data
+
+
++++ <script type="text/javascript" src="FileSaver.min.js" charset="utf-8"></script>
+FileSaver.min.js is to support downloading of files
+CREDIT http://purl.eligrey.com/github/FileSaver.js/blob/master/FileSaver.js 
+
+
+
+
++++ <img src="ducktracker_logo.png" align="middle">
+        Add duck logo
+
+
+
+
++++ <a href="/ducktracker.apk">Download the Duck Tracker app</a><br>
++++ <a href="/ducktracker_convert.py">Download the data conversion tool</a>
+        Links for download of software tools associated with Duck Tracker system
+
+
++++ <table id="example" class="display" role="grid" aria-describedby="example_info">
+        Make frame of table to display data
+
+
+
+
+
+
++++ Series of references to javascript support libraries
+        CREDIT in comments of files (see js directory)
+
+
++++ $(document).ready(function(){ 
+Use the jQuery function to execute subsequent functions after the document is loaded in the current period
+
+
+        
++++ $.ajax({Use the ajax function in the jQuery library
++++ url: "https://ducktracker-d95db.firebaseio.com/.json", Set data acquisition address
++++ type: "GET", 
+The way to get data is “Get” The data type is json format
+
+
++++ success: function (data)
+When the data acquisition is successful, execute subsequent functions
+ 
++++ var count=0
+Set the count variable to count how many data there are in total for (var key in data) Loop raw data
+                
++++ for (var key2 in data[key]) 
+Since the original data is in the form of key and value, the original data is two-dimensional, so there is also the form of key-value in the value. So we need to do this second for loop
+    
++++ arr['x']=data[key][key2]['latitude']; 
+Set the key name to x, and the corresponding value is the content in the data [key] [key2] ['latitude'] variable, which is latitude. Subsequent lines are similar in logic.
+        
++++ $("#example tbody").append(html); 
+Use js to create a new table row, fill the data into this table row, and then append it to the existing table to display.
+        
++++ $('#example').DataTable( { 
+In the example table with id, create a new DataTable to display,
+
+
+
+
++++ extend: 'copyHtml5', 
+Define a copy function button. Similar syntax for other buttons
+
+
++++ $(".buttons-copy").text('Copy'); 
+Set button id to buttons-copy display text to Copy
+
+
+
+
++++ $(".buttons-excel").click(function(){ 
+Define a time to trigger the function inside when the control with buttons-excel id is clicked. 
+   
++++ var blob = new Blob([content], {type: "text/plain;charset=utf-8"}); 
+Instantiate a new Blob object, whose main parameter is to set the encoding to utf8.
+
+
+
+
++++ $(".buttons-pdf").text('ExportToPdf'); 
+Set button id to buttons-pdf display text to ExportToPdf. Similar logic for other buttons
+        
+
+
+Python conversion and data pull script
+Programmer - Nick Henderson
+
+
+ducktracker_convert.py
+
+
++++ Contains several import statements for libraries included in the Python 3 standard library: datetime, urllib, tkinter, json, statistics, and random
+
+
++++ A global variable holds the expected temporal sampling interval (TSI) — 5 minutes is used in this program per the project requirements
+
+
++++ main() -> None
+        --- Constructs and opens a Tkinter window with a brief description of the application and 
+a button to continue, which calls the pull_firebase() function
+
+
++++ pull_firebase() -> None
+        --- Uses urllib’s request module to connect to Firebase and retrieve a JSON object 
+representing the database, which is passed to the write_out() function
+        --- pick_output() is called and passed as the second argument in the call to write_out()
+
+
++++ pick_output() -> str
+--- Opens a “Save As” window for the user to select their desired destination for the output file and returns this destination as a string. Uses the datetime library to get the current date, which is used to suggest a filename in an ISO-8601 compliant format: “ducktracker_YYYY-MM-DD”.
+
+
++++ write_out(data: JSON object, out_filename: str) -> None (writes to external file)
+        --- Contains the bulk of the functionality. In sum, this function writes the JSON database 
+to the file specified by the user in the tab-delimited format required by the system requirements. 
+        --- For each database entry from each user, blank latitude/longitude values are cleaned, 
+the date is reformatted from ISO-8601 to MM/DD/YYYY, latitude and longitude values are trimmed to four decimal places, time at location is updated, and home anonymization is performed before writing to the text file.
+        --- Time at location is reset when the user’s most recent location does not match the 
+location logged immediately before, determined by calling the is_same_place() function. Time at location is incremented by the TSI when the location matches and the previous measurement occurred within a period of two times the TSI. This process is performed by calling the within_tsi() function.
+--- Home anonymization is performed for measurements that appear to be the user’s home. Home is determined by calling the find_home() function, and each measurement is compared to home using is_same_place(). If an entry appears to be at their home, that coordinate is replaced with a dummy house coordinate, whose 4th decimal is a random number 0-9. 
+
+
++++ is_same_place(latlon_1: int tuple, latlon_2: int tuple) -> bool
+        --- Given two coordinated, returns if they are the same location using a margin of .0002
+degrees, approximately 70 feet. Greater accuracy should not be expected, since cell phone accuracy is often unreliable on a granular level. 
+
+
++++ within_tsi(before_date: string, before_time: string, after_date: string, after_time: string) -> bool
+        --- Given date/time strings, determines if the amount of time elapsed between them is 
+greater than double the TSI (the “safety margin” for location accuracy). If this check fails, we cannot accurately claim that a user has been at a certain location for the entire duration of the elapsed time — this is how it is used for time at location.
+
+
++++ find_home(data: JSON object, user: JSON object) -> int tuple
+        --- Approximates a user’s home by finding the location they have logged the most 
+measurements from. If there are multiple locations tied for most frequent, the user has likely not been using the app long enough to make an accurate prediction. In this case, the first location is used as a guess until the script is run again with more definitive data.
